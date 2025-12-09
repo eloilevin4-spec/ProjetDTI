@@ -1,0 +1,15 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "dev": "electron .",
+    "start": "electron-builder build"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0"
+  },
+  "dependencies": {
+    "@mlc-ai/web-llm": "^0.2.80"
+  }
+}

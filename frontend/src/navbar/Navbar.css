@@ -1,0 +1,100 @@
+
+.navbar {
+  width: 250px;
+  height: 100vh;
+  background-color: #1d4ed8; 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  transition: width 0.3s; 
+}
+
+
+.navbar.collapsed {
+  width: 70px; 
+}
+
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: opacity 0.3s;
+}
+
+
+.navbar.collapsed .navbar-title {
+  opacity: 0;
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.navbar-link .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar.collapsed .navbar-link .link-text {
+  display: none;
+}
+
+.navbar-link:hover {
+  background-color: #2563eb;
+  cursor: pointer;
+  transform: translateX(2px);
+}
+
+.navbar-link.active {
+  background-color: white;
+  color: #1d4ed8;
+  font-weight: bold;
+}
+
+.dashboard-container {
+  display: flex;          
+  height: 100vh;          
+}
+
+.dashboard-main {
+  flex: 1;                
+  background-color: #f9fafb;
+  padding: 20px;
+  overflow-y: auto;       
+}

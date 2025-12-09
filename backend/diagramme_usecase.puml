@@ -1,0 +1,35 @@
+@startuml
+actor Utilisateur
+
+rectangle "Application de capture de temps" {
+    usecase "Ouvrir l’application" as UC1
+    usecase "Afficher les activités récentes" as UC2
+    usecase "Sélectionner une activité" as UC3
+    usecase "Démarrer une activité" as UC4
+    usecase "Mettre en pause l’activité courante" as UC5
+    usecase "Arrêter l’activité courante" as UC6
+    usecase "Changer d’activité" as UC7
+    usecase "Consulter l’historique" as UC8
+    usecase "Exporter l’historique" as UC9
+    usecase "Configurer les préférences" as UC10
+}
+
+Utilisateur --> UC1
+Utilisateur --> UC4
+Utilisateur --> UC5
+Utilisateur --> UC6
+Utilisateur --> UC7
+Utilisateur --> UC8
+Utilisateur --> UC9
+Utilisateur --> UC10
+
+' Relations include / extend
+UC1 --> UC2 : <<include>>
+UC4 --> UC3 : <<include>>
+UC3 --> UC6 : <<include>>  # si une activité est déjà en cours
+UC6 --> UC2 : <<include>>
+UC7 --> UC6 : <<include>>
+UC7 --> UC4 : <<include>>
+UC9 ..> UC8 : <<extend>>
+
+@enduml

@@ -1,0 +1,23 @@
+/* Dashboard.css */
+
+/*
+  Le conteneur principal (la div englobante) est défini dans Dashboard.tsx
+  avec display: flex et min-height: 100vh.
+*/
+.dashboard-container {
+  /* Assure que rien ne déborde au niveau du corps de la page */
+  overflow: hidden;
+  /* Optionnel : peut être utile si d'autres éléments sont positionnés en absolu */
+  position: relative;
+}
+
+/* Le contenu principal <main> a déjà flex-grow: 1, ce qui lui permet 
+  de prendre l'espace restant à côté de la Navbar.
+*/
+.dashboard-main {
+  /* Vous pouvez définir ici des styles de fond globaux pour vos pages */
+  background-color: #f4f7f6; /* Une couleur de fond claire pour contraster avec la navbar sombre */
+  color: #333; /* Couleur de texte par défaut */
+  
+  /* Laissez flex-grow et le padding gérés par le composant Dashboard.tsx pour plus de contrôle */
+}

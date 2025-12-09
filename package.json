@@ -1,0 +1,17 @@
+{
+  "name": "dti-tracker-root",
+  "version": "1.0.0",
+  "description": "Lanceur pour l'application de suivi d'activité DTI.",
+  "scripts": {
+    "dev": "concurrently \"npm start --prefix ./backend\" \"npm start --prefix ./frontend\" \"npm run dev --prefix ./electron\"",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install && cd ../electron && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@mlc-ai/web-llm": "^0.2.80",
+    "firebase-admin": "^13.5.0",
+    "idb": "^8.0.3"
+  }
+}
